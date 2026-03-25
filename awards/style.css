@@ -1,88 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-#wrapper{
-    font-family: 'Varela Round', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    /* padding: 2rem; */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: row;
-    position: relative;  
-    width: 90%;
-    margin: 0 auto;
-}
-.heading{
-    margin-top: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    /* margin: 30px;
-    margin-bottom: 0; */
-    font-size:40px;
-    position: relative;
+/* Wrapper */
+.wrapper {
+  font-family: 'Varela Round', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: #f9fafc;
 }
 
-.empty {
-    background-color: rgb(44, 21, 91);
-    height: 8px;
-    width: 17rem;
-    position: absolute;
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.mainHeading{
-    text-shadow:3px 3px 5px rgb(87, 77, 77);
-    letter-spacing: 5px;
-}
-.award{
-    margin: 4rem;
-    font-size: 28px;
-    /* line-height: 2rem; */
-    padding: 0 5rem;
-    color: rgb(80, 43, 43);
-    
-
-}
-.award li{
-    /* line-height: 3rem; */
-    margin-bottom: 10px;
-}
-.awardSec{
-  margin-top:3rem ;
-  /* background-image: linear-gradient(to right, red , yellow); */
-  background-image: linear-gradient(to right, rgba(117, 219, 187, 0.879),rgb(105, 216, 174));
-}
-.achivement{
-    font-weight: 600;
-}
-.mainHeading{
-    text-shadow:3px 3px 5px rgb(87, 77, 77);
-    letter-spacing: 5px;
+/* Heading */
+.heading {
+  margin-top: 2rem;
+  text-align: center;
 }
 
+.mainHeading {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/* Underline using pseudo element */
+.mainHeading::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 6px;
+  background: linear-gradient(to right, #2c155b, #6a5acd);
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* Awards Section */
+.awardSec {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background: linear-gradient(to right, rgba(117, 219, 187, 0.9), rgb(105, 216, 174));
+  border-radius: 12px;
+}
+
+/* List */
+.award {
+  font-size: 20px;
+  color: rgb(70, 40, 40);
+  padding: 0 4rem;
+  line-height: 1.6;
+}
+
+/* List Items */
+.award li {
+  margin-bottom: 14px;
+}
+
+/* Highlighted Text */
+.achivement {
+  font-weight: 600;
+  color: #2c155b;
+}
+
+/* Responsive Design */
 @media only screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-    .empty{
-      width: 9.5rem;
-    }
-    .award {
-      margin: 2rem;
-      padding: 0.5rem 1rem;
-      padding-right: 0;
-    }
-    .mainHeading {
-      font-size: 30px;
-    }
-    .award li {
-      font-size: 18px;
-    }
+  .container {
+    flex-direction: column;
   }
+
+  .mainHeading {
+    font-size: 28px;
+  }
+
+  .award {
+    padding: 0 1.5rem;
+    font-size: 16px;
+  }
+
+  .award li {
+    margin-bottom: 10px;
+  }
+}

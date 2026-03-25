@@ -21,18 +21,34 @@
   margin: 0 auto;
 }
 
-.heading{
-  margin-top: 1rem;
+/* Heading */
+.heading {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.mainHeading {
   font-family: 'Ubuntu', sans-serif;
-  font-size:40px;
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  display: inline-block;
   position: relative;
 }
 
-.empty {
-  background-color: rgb(44, 21, 91);
-  height: 8px;
-  width: 24rem;
+/* Underline FIX */
+.mainHeading::after {
+  content: "";
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+
+  width: 60%;
+  height: 4px;
+
+  background: linear-gradient(to right, #2c155b, #6a5acd);
+  border-radius: 10px;
 }
 .eductionSec{
   margin-top:3rem ;

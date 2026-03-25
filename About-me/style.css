@@ -1,111 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-#wrapper{
-    font-family: 'Varela Round', sans-serif;
-    width: 100vw;
-    height: 100vh;
-}
-.container{
-    display: flex;
-    justify-content: center; 
-    flex-direction: column;
-    position: relative;  
-    width: 90%;
-    margin: 0 auto;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.heading{
-    margin-top: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    /* margin: px; */
-    /* margin-bottom: 20px;  */
-    font-size:35px;
-    position: relative;
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    /* gap: 2px; */
+/* Wrapper */
+#wrapper {
+  font-family: 'Varela Round', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: #f9fafc;
 }
-.empty {
-    /* background-color: rgb(44, 21, 91); */
-    background-color: rgb(187, 144, 144);
-    height: 8px;
-    width: 17rem;
-    position: absolute;
-    top: 3.5rem;
-    /* bottom:-15px; */
-    
-   
-}
-.about-me{
-    /* margin-top: 1rem; */
-    font-size: 16px;
-    /* line-height: 2rem; */
-    /* margin: 0 auto; */
-    padding: 0 5rem;
-    color: rgb(80, 43, 43);
 
+/* Container */
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
-h2{
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
 
+/* Heading */
+.heading {
+  margin-top: 2rem;
+  text-align: center;
 }
-.list{
-    padding-left: 2rem;
-}
-.about-me li{
-    /* line-height: 3rem; */
-    margin-bottom: 15px;
-}
-.important{
-    font-weight: bold;
-}
-.aboutsec{
-  margin-top:3rem ;
-  background-image: linear-gradient(to right ,rgb(183, 238, 235),rgba(60, 181, 189, 0.902));
 
+.mainHeading {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 36px;
+  display: inline-block;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  position: relative;
 }
-.about-cnt{
-  margin: 4rem 2rem 2rem 4rem ;
+
+/* Underline */
+.mainHeading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+
+  width: 70%;              /* control line length */
+  height: 4px;
+
+  background: linear-gradient(to right, #bb9090, #5a8dee);
+  border-radius: 10px;
+}
+
+/* About Section */
+.aboutsec {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(to right, rgb(183, 238, 235), rgba(60, 181, 189, 0.9));
+  border-radius: 12px;
+}
+
+/* Paragraph */
+.about-cnt {
   font-size: 18px;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  color: #333;
 }
-.achive{
-    /* font-size:x-large; */
-    font-weight: 600;
+
+/* Section blocks */
+.about-me {
+  margin-bottom: 2rem;
 }
-.mainHeading{
-    text-shadow:4px 4px 8px rgb(83, 73, 73);
-    letter-spacing: 5px;
+
+/* Sub-headings */
+.about-me h2 {
+  font-size: 22px;
+  margin-bottom: 0.8rem;
+  color: #2c155b;
 }
-@media only screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-    .empty{
-      width: 11rem;
-      position: absolute;
-      top: 2rem;
-    }
-    .about-me {
-      /* margin: 2rem; */
-      padding: 0.5rem 1rem;
-      padding-right: 0;
-    }
-    .about-cnt{
-      margin-left: 1rem;
-    }
-    .mainHeading {
-      font-size: 30px;
-    }
-    .abpout-me li {
-      font-size: 18px;
-    }
+
+/* Lists */
+.list {
+  padding-left: 1.5rem;
+}
+
+.about-me li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Highlight */
+.important {
+  font-weight: 600;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 28px;
   }
+
+  .aboutsec {
+    padding: 1.5rem;
+  }
+
+  .about-cnt {
+    font-size: 16px;
+  }
+
+  .about-me h2 {
+    font-size: 20px;
+  }
+}
